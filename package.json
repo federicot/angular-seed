@@ -2,6 +2,14 @@
   "name": "my-app",
   "version": "0.0.1",
   "description": "My App",
+  "repository": { 
+      "type": "git",
+      "url": "https://github.com/federicot/angular-seed.git"
+  },
+  "author": {
+      "name": "Federico Tarantini",
+      "email": "federicot@gmail.com"
+  }
   "scripts": {
       "test": "./node_modules/.bin/karma start test/karma-unit.conf.js --single-run --browsers PhantomJS"
   },
