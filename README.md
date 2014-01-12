@@ -1,4 +1,4 @@
-Angular Seed
+Angular Seed [![Build Status](https://travis-ci.org/federicot/angular-seed.png?branch=master)](https://travis-ci.org/federicot/angular-seed)
 ============
 
 Install
