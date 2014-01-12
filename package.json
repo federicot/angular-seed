@@ -9,7 +9,7 @@
   "author": {
       "name": "Federico Tarantini",
       "email": "federicot@gmail.com"
-  }
+  },
   "scripts": {
       "test": "./node_modules/.bin/karma start test/karma-unit.conf.js --single-run --browsers PhantomJS"
   },
