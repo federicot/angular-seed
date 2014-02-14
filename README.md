@@ -5,8 +5,7 @@ Install
 -------
 1. `npm install`
 2. `npm install -g grunt-cli`
-3. `npm install -g bower`
-4. `bower install`
+4. `grunt install`
 
 Development
 -----------
@@ -21,13 +20,4 @@ Production
 
 Testing
 -------
-#### Install
-Download [selenium-server-standalone] (https://code.google.com/p/selenium/downloads/list)  
-Download [chromedriver] (http://chromedriver.storage.googleapis.com/index.html)
-
-1. `cp /path/to/selenium-server-standalone.jar node_modules/protractor/selenium/`
-2. `cp /path/to/chromedriver node_modules/protractor/selenium`
-3. `chmod u+x node_modules/protractor/selenium`
-
-#### Run
 1. `grunt test`

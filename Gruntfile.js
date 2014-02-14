@@ -5,7 +5,20 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
 
-        pkg: grunt.file.readJSON('package.json'),
+        shell: {
+            options: {
+                stdout: true
+            },
+            protractor_install: {
+                command: 'node ./node_modules/protractor/bin/webdriver-manager update'
+            },
+            npm_install: {
+                command: 'npm install'
+            },
+            bower_install: {
+                command: 'node ./node_modules/bower/bin/bower install --allow-root'
+            }
+        },
 
         uglify: {
             options: {
@@ -130,7 +143,8 @@ module.exports = function(grunt) {
         },
         connect: {
             options: {
-                base: 'src/'
+                base: 'src/',
+                hostname: '*'
             },
             webserver: {
                 options: {
@@ -187,6 +201,10 @@ module.exports = function(grunt) {
             }
         }
     });
+
+    // Install
+    grunt.registerTask('install', ['shell:npm_install', 'shell:bower_install', 'shell:protractor_install']);
+    grunt.registerTask('update', ['shell:npm_install', 'shell:bower_install', 'shell:protractor_install']);
 
     // Tests
     grunt.registerTask('test', ['jshint','test:unit', 'test:e2e']);
